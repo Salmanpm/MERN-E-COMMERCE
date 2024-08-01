@@ -15,7 +15,11 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
 
+    const urlBackend = 'http://localhost:4000'
+
     const url = "https://e-commerce-backend-ocdj.onrender.com"
+
+    const url = urlBackend
 
     const [all_product,setAll_Product] = useState([])
 
