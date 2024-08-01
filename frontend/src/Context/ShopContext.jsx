@@ -26,7 +26,7 @@ const ShopContextProvider = (props) => {
     const [cartItems,setCartItems] = useState(getDefaultCart())
 
     useEffect(() => {
-        fetch('url/allproducts')
+        fetch("https://e-commerce-backend-ocdj.onrender.com")
         .then((response) => response.json())
         .then((data) => setAll_Product(data))
 
