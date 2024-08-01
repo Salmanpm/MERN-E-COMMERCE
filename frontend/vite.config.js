@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://e-commerce-backend-ocdj.onrender.com",
+  base: "http://localhost:4000",
 })
