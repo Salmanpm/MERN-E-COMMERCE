@@ -15,7 +15,7 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
 
-    const urlBackend = 'http://localhost:4000'
+    
 
     const url = "https://e-commerce-backend-ocdj.onrender.com"
 
@@ -29,7 +29,7 @@ const ShopContextProvider = (props) => {
         .then((data) => setAll_Product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart',{
+            fetch(`${url}/getcart`,{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -49,7 +49,7 @@ const ShopContextProvider = (props) => {
 
         const auth_token = localStorage.getItem('auth-token')
         if(auth_token) {
-            fetch('http://localhost:4000/addtocart',{
+            fetch(`${url}/addtocart`,{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -68,7 +68,7 @@ const ShopContextProvider = (props) => {
 
         const auth_token = localStorage.getItem('auth-token')
         if(auth_token) {
-            fetch('http://localhost:4000/removefromcart',{
+            fetch(`${url}/removefromcart`,{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
